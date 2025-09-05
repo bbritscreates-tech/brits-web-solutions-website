@@ -1,4 +1,6 @@
-
+* {
+    font-family: 'Times New Roman', serif;
+}
 
 body {
     margin: 0;
@@ -8,32 +10,56 @@ header {
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
 }
 
 .nav-logo img{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     border-radius: 20px;
-    margin-left: 40px;
 }
 
 header p {
     color: ;
-    font-size: ;
+    font-size: 15px;
     font-weight: ;
+    text-align: center;
+    display: inline-block;
+    margin-right: 400px;
+}
+
+nav {
+    align-content: center;
+    justify-content: center;
+    padding-right: 20px;
 }
 
 nav ul {
     list-style-type: none;
 }
 
+nav ul li {
+    display: inline-block;
+}
+
 nav a {
     text-decoration: none;
-    font-size: ;
-    font-weight: ;
-    color: ;
+    font-size: 15px;
+    color: black;
+    padding-right: 10px;
+    padding-left: 15px;
+    text-align: center;
 }
 
 nav a::after {
