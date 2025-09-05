@@ -1,5 +1,6 @@
 * {
     font-family: 'Times New Roman', serif;
+    margin: 0;
 }
 
 body {
@@ -16,6 +17,7 @@ header {
     width: 100%;
     height: 30px;
     margin-top: 20px;
+    z-index: 999;
 }
 
 .nav-logo {
@@ -62,9 +64,162 @@ nav a {
     text-align: center;
 }
 
-nav a::after {
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: left;
+    padding: 0px 20px;
+    margin: 0 15px;
+}
+
+.hero-headings {
+    flex: 1;
+}
+
+.hero-headings h1 {
 
 }
 
+.hero-headings a {
 
+}
 
+.hero-content-image {
+
+}
+
+.hero-content-image img {
+    width: 200px;
+    height: 200px;
+    flex: 1;
+}
+
+.hero-about {
+    background-color: grey;
+    width: 100%;
+    height: auto;
+}
+
+.hero-about-content {
+    padding: 30px 35px;
+}
+
+.hero-about-content h3 {
+    font-size: ;
+    font-weight: ;
+    color: ;
+}
+
+.hero-about-content p {
+    font-size: ;
+    font-weight: ;
+    color: ;
+}
+
+.hero-about-content a {
+
+}
+
+.hero-projects {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+}
+
+.hero-projects-heading {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-projects-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px;
+    gap: 100px;
+}
+
+.box {
+    flex: initial;
+    width: 100px;
+    height: 200px;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    background-color: gray;
+    width: 100%;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 35px 0;
+    gap: 20px;
+}
+
+.footer-box {
+    border: solid 2px black;
+    flex: 1;
+    margin: 0 35px;
+    align-items: center;
+    justify-items: center;
+    padding: 20px
+}
+
+.footer-social {
+    padding: 20px 0;
+}
+
+.footer-box button {
+
+}
+
+form input {
+    width: 300px;
+}
+
+form textarea {
+    width: 300px;
+    height: auto;
+}

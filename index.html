@@ -29,20 +29,26 @@
         </header>
 
         <!--First Section-->
-        <section>
-            <div>
-                <video src="" mute loop></video>
-                <div>
+        <section class="hero">
+            <video src="/Content/Videos/Animated Background, free background video, royalty free background, white color backgrounds motion,.mp4" mute loop autoplay class="hero-video">Your browser does not support HTML 5 video</video>
+            <!--Overlay-->
+            <div class="overlay"></div>
+            <!--Content-->
+            <div class="hero-content">
+                <div class="hero-headings">
                     <h1>Placeholder Text</h1>
                     <a href="">Contact →</a>
                 </div>
-            </div>
+                <div class="hero-content-image">
+                    <img src="/Content/Images/placeholder-img.png" alt="placeholder image"/>
+                </div>    
+            </div>      
         </section>
 
         <!--About Section-->
-        <section>
-            <div>
-                <p>ABOUT</p>
+        <section class="hero-about">
+            <div class="hero-about-content">
+                <h3>ABOUT</h3>
                 <p>Placeholder text</p>
                 <a href="">READ MORE →</a>
             </div>
@@ -52,22 +58,26 @@
         </section>
 
         <!--Projects Section-->
-        <section>
-            <div>
+        <section class="hero-projects">
+            <div class="hero-projects-heading">
+                <h3>Projects</h3>
+                <p>Some Projects</p>
+            </div>
+            <div class="hero-projects-div">
                 <!--Project 1-->
-                <div>
+                <div class="box">
                     <img src="/Content/Images/placeholder-img.png"/>
                     <p>Project 1</p>
                 </div>
                 
                 <!--Project 2-->
-                <div>
+                <div class="box">
                     <img src="/Content/Images/placeholder-img.png"/>
                     <p>Project 2</p>
                 </div>
                 
                 <!--Project 3-->
-                <div>
+                <div class="box">
                     <img src="/Content/Images/placeholder-img.png"/>
                     <p>Project 3</p>
                 </div>
@@ -76,32 +86,33 @@
 
         <!--Footer-->
         <footer>
-            <div>
-                <img src="/Content/Logo/Logo.png" alt="Brits Web Solutions Full Logo"/>
-            </div>
             <!--Social Div-->
-            <div>
-                <div>
-                    <p>SOCIAL</p>
-                    <a href=""><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <div class="footer-content">
+                <div class="footer-box">
+                    <div>
+                        <p>SOCIAL</p>
+                        <div class="footer-social">
+                            <a href=""><i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook</a><br><br>
+                            <a href=""><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a><br><br> 
+                            <a href=""><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> Linkedin</a>
+                        </div>    
+                    </div>    
                 </div>
                 <!--Contact Form-->
-                <div>
+                <div class="footer-box">
                     <div>
                         <p>CONTACT</p>
                     </div>
                     <div>
-                        <a href="mailto:"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                        <a href="mailto:"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
                     </div>
                     <form method="post" action="" autocomplete="on">
                         <input type="text" placeholder="First Name*" required><br>
                         <input type="text" placeholder="Last Name*" required><br>
-                        <input type="number" placeholder="Contact Number*" required/><br>
-                        <input type="text" placeholder="Email*" required/><br>
-                        <input type="textbox" placeholder="Message*" required/><br>
-                        <input type="submit"/>
+                        <input type="tel" placeholder="Contact Number*" required/><br>
+                        <input type="email" placeholder="Email*" required/><br>
+                        <textarea placeholder="Message*" maxlength="300"></textarea><br>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
             </div>    
