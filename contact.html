@@ -37,12 +37,20 @@
             </section>
             <section class="section">
                 <div class="container contact-grid">
-                    <form class="contact-form card" name="contact" method="POST" netlify>
-                        <label>Name<input type="text" required></label>
-                        <label>Email<input type="email" required></label>
-                        <label>Message<textarea required></textarea></label>
-                        <button type="submit" class="btn-primary">Send</button>
-                    </form>
+                    <form name="contact" method="POST" netlify>
+                        <p>
+                            <label>Your Name: <input type="text" name="name" /></label>
+                        </p>
+                        <p>
+                            <label>Your Email: <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                            <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </form> 
                 </div>
             </section>
         </main>
