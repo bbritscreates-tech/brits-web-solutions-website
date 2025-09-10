@@ -123,10 +123,6 @@ a {
     padding: 20px 35px;
 }
 
-.container {
-
-}
-
 .site-footer {
     width: 100%;
     height: auto;
@@ -171,3 +167,139 @@ a {
     color: #00A6FB;
     padding-right: 5px;
 }
+
+.menu-toggle {
+    display: none;
+}
+
+/* ================================
+   Mobile Responsive Styles
+   ================================ */
+
+@media (max-width: 768px) {
+    .site-header {
+        background-color: rgba(236,238,240,0.95);
+        padding: 10px 15px;
+    }
+
+    .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide nav links initially on mobile */
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,166,251,0.2);
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Hamburger menu */
+    .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        color: #003554;
+        cursor: pointer;
+    }
+
+    /* Hide hamburger on desktop */
+    @media (min-width: 769px) {
+        .menu-toggle {
+            display: none;
+        }
+    }
+
+    /* Hero section */
+    .hero {
+        height: 280px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .muted {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small phones (max 480px) */
+@media (max-width: 480px) {
+    .hero {
+        height: 220px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+}   
