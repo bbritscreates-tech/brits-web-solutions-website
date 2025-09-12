@@ -92,15 +92,14 @@ a {
 }
 
 .hero-content h1 {
-    font-size: ;
-    color: ;
-    font-weight: ;
+    font-size: 40px;
+    color: #003554;
     padding-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: ;
-    color: ;
+    font-size: 18px;
+    color: #00A6FB;
     padding-bottom: 20px;
 }
 
@@ -120,7 +119,17 @@ a {
 .intro {
     width: 100%;
     height: auto;
-    padding: 20px 35px;
+    padding: 30px 35px;
+}
+
+.intro .container h2{
+    font-size: 30px;
+    color: #003554;
+    padding-bottom: 20px;
+}
+
+.intro .container p {
+    font-size: 18px;
 }
 
 .site-footer {
@@ -407,6 +416,5 @@ a {
 
 .card p {
     font-size: 15px;
-    color: ;
     padding: 10px 0;
 }
