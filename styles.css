@@ -419,3 +419,11 @@ a {
     padding: 10px 0;
 }
 
+.portfolio-section .portfolio-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 35px;
+}
