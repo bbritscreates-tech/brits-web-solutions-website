@@ -427,3 +427,34 @@ a {
     gap: 20px;
     padding: 30px 35px;
 }
+
+.contact-container {
+    display: flex;
+    gap: 400px;
+}
+
+form {
+    background-color: rgb(236,238,240,0.75);
+    padding: 0 20px;
+    border-radius: 20px;
+    height: 215px;
+}
+
+ .form-btn {
+    color: #fff;
+    background-color: #0582CA;
+    padding: 5px 8px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-btn:hover {
+    color: #003554;
+    background-color: #00A6FB;
+}
+
+textarea {
+    margin-left: 22px;
+    width: 165px; 
+}
