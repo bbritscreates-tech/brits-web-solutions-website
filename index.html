@@ -1,78 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Brits Web Solutions | Home</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="styles.css"/>
-    </head>
 
-    <body>
-        <!--Navbar-->
-        <header class="site-header">
-            <div class="header-inner">
-                <div class="brand">
-                    <img src="/Content/Logo/Logo-symbol.png" alt="Logo Symbol" class="logo">
-                    <span class="brand-name">Brits Web Solutions</span>
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brits Web Solutions | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
 
-                <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-
-                <nav class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+<body>
+    <!--Navbar-->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <img src="/Content/Logo/Logo-symbol.png" alt="Logo Symbol" class="logo">
+                <span class="brand-name">Brits Web Solutions</span>
             </div>
-        </header>
 
-        <main>
-            <section class="hero">
-                <div class="hero-container">
-                    <video src="/Content/Videos/Animated Background, free background video, royalty free background, white color backgrounds motion,.mp4" type="video/mp4" autoplay muted loop>Video not supported by your browser</video>
-                </div>
-                <div class="hero-content">
-                    <h1>Placeholder Heading</h1>
-                    <p>Placeholder text</p>
-                    <a href="contact.html" class="btn-primary">Get in Touch →</a>
-                </div>
-            </section>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 
-            <section class="intro">
-                <div class="container">
-                    <h2>Why Choose Us?</h2>
-                    <p>We blend creativity and technology to deliver websites that are not only beautiful but also functional and business-driven.</p>
-                </div>
-            </section>
-        </main>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-        <!--Footer-->
-        <footer class="site-footer">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <img src="/Content/Logo/Logo-symbol.png" alt="Logo" class="logo-sm"/>
-                </div>
-                <div class="social-links">
-                    <a href="mailto:hello@britswebsolutions.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <div>
-                    <p class="muted">&copy; 2025 Brits Web Solutions. All rights reserved.</p>
-                </div>
-            </div>   
-        </footer>
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <video
+                    src="/Content/Videos/Animated Background, free background video, royalty free background, white color backgrounds motion,.mp4"
+                    type="video/mp4" autoplay muted loop>Video not supported by your browser</video>
+            </div>
+            <div class="hero-content">
+                <h1>Professional Websites That Help Small Businesses Grow</h1>
+                <p>I design and build modern websites, online stores, and reliable maintenance solutions — so you can
+                    focus on running your business.t</p>
+                <a href="contact.html" class="btn-primary">Get in Touch →</a>
+            </div>
+        </section>
 
-        <script>
-            const menuToggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nav');
-            menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        </script>
-    </body>
+        <section class="intro">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li><strong>Built for small businesses</strong> – I understand tight budgets and real-world needs
+                    </li>
+                    <li><strong>Clear communication</strong> – No technical jargon, no surprises</li>
+                    <li><strong>Fast & reliable</strong> – Modern, responsive websites that load quickly</li>
+                    <li><strong>Ongoing support</strong> – I don’t disappear after launch</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Services</h2>
+            <div class="container services-grid">
+                <div class="card">
+                    <h3>Small Business Websites</h3>
+                    <img src="/Content/Images/placeholder-img.png" alt="placeholder img" />
+                    <p>For businesses that need a professional online presence.</p>
+                    <ul>
+                        <li>Custom-designed, mobile-friendly websites</li>
+                        <li>Fast loading & SEO-ready</li>
+                        <li>Clear layout focused on enquiries</li>
+                        <li>Contact forms, maps, and basic integrations</li>
+                    </ul>
+                    <p><strong>Best for:</strong> Local businesses, startups, service providers<br>
+                        <strong>Outcome:</strong> A professional site that builds trust and gets enquiries
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>E-Commerce Stores</h3>
+                    <img src="/Content/Images/placeholder-img.png" alt="placeholder img" />
+                    <p>Sell your products online with confidence</p>
+                    <ul>
+                        <li>Secure, user-friendly online stores</li>
+                        <li>Product setup & payment integration</li>
+                        <li>Mobile-optimized checkout</li>
+                    </ul>
+                    <p><strong>Best for:</strong> Businesses ready to sell online<br>
+                        <strong>Outcome:</strong> A store that’s easy to manage and easy for customers to buy from
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Website Maintenance & Hosting</h3>
+                    <img src="/Content/Images/placeholder-img.png" alt="placeholder img" />
+                    <p>Keep your website secure, fast, and up to date</p>
+                    <ul>
+                        <li>Regular updates & backups</li>
+                        <li>Security monitoring</li>
+                        <li>Performance checks</li>
+                        <li>Ongoing support when you need changes</li>
+                    </ul>
+                    <p><strong>Best for:</strong> Businesses that want peace of mind<br>
+                        <strong>Outcome:</strong> A website that works reliably without stress
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-content">
+                <div class="contact">
+                    <h3>Contact Us</h3>
+                    <a href="">
+                        <i class="fa-solid fa-phone"></i> 012 345 6789
+                    </a><br><br>
+                    <a href="">
+                        <i class="fa-solid fa-envelope"></i> info@spectrarig.com
+                    </a><br><br>
+                    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook"></i>Facebook</a>
+                </div>
+            </div>
+            <div class="footer-content no-border">
+                <div class="contact-form-container" id="contact">
+                    <form name="contact" method="POST" netlify>
+                        <p>
+                            <label>Your Name: <input type="text" name="name" /></label>
+                        </p>
+                        <p>
+                            <label>Your Email: <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                            <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                            <button class="form-btn" type="submit">Send</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright-container">
+            <div class="copyright">
+                <p class="muted">&copy; 2025 Brits Web Solutions. All rights reserved.</p>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
 </html>

@@ -1,80 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Brits Web Solutions | About</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="styles.css"/>
-    </head>
 
-    <body>
-        <!--Navbar-->
-        <header class="site-header">
-            <div class="container header-inner">
-                <div class="brand">
-                    <img src="/Content/Logo/Logo-symbol.png" alt="Logo Symbol" class="logo">
-                    <span class="brand-name">Brits Web Solutions</span>
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brits Web Solutions | About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
 
-                <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-
-                <nav class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+<body>
+    <!--Navbar-->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="/Content/Logo/Logo-symbol.png" alt="Logo Symbol" class="logo">
+                <span class="brand-name">Brits Web Solutions</span>
             </div>
-        </header>
 
-        <main>
-            <section class="page-hero">
-                <img src="/Content/Images/about-background.jpeg" alt="Office"/>
-                <div class="container">
-                    <h1>About Us</h1>
-                    <p>At Brits Web Solutions, we believe every business deserves a powerful online presence.</p>
-                </div>
-            </section>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 
-            <section class="about-section">
-                <div class="container">
-                    <h2>Our Mission</h2>
-                    <p>To help small and medium businesses thrive through smart, beautiful web design and development.</p>
-                    <h2>Our Values</h2>
-                    <ul>
-                        <li>Professionalism</li>
-                        <li>Creativity</li>
-                        <li>Reliability</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-        <!--Footer-->
-        <footer class="site-footer">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <img src="/Content/Logo/Logo-symbol.png" alt="Logo" class="logo-sm"/>
+    <main>
+        <section class="page-hero">
+            <img src="/Content/Images/about-background.jpeg" alt="Office" />
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Hi, I’m Bernadette Brits, the person behind Brits Web Solutions</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2>My Mission</h2>
+                <p>I help small businesses build professional, easy-to-manage websites that actually support their
+                    business goals.<br><br>
+                    I focus on clean design, clear communication, and reliable long-term support — so you’re never left
+                    guessing about your website.<br><br>Whether you need a new website, an online store, or someone reliable to maintain your site, I’m here to help.</p>
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Professionalism</li>
+                    <li>Creativity</li>
+                    <li>Reliability</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-content">
+                <div class="contact">
+                    <h3>Contact Us</h3>
+                    <a href="">
+                        <i class="fa-solid fa-phone"></i> 012 345 6789
+                    </a><br><br>
+                    <a href="">
+                        <i class="fa-solid fa-envelope"></i> info@spectrarig.com
+                    </a><br><br>
+                    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook"></i>Facebook</a>
                 </div>
-                <div class="social-links">
-                    <a href="mailto:hello@britswebsolutions.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="footer-content no-border">
+                <div class="contact-form-container" id="contact">
+                    <form name="contact" method="POST" netlify>
+                        <p>
+                            <label>Your Name: <input type="text" name="name" /></label>
+                        </p>
+                        <p>
+                            <label>Your Email: <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                            <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                            <button class="form-btn" type="submit">Send</button>
+                        </p>
+                    </form>
                 </div>
-                <div>
-                    <p class="muted">&copy; 2025 Brits Web Solutions. All rights reserved.</p>
-                </div>
-            </div>   
-        </footer>
-        <script>
-            const menuToggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nav');
-            menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        </script>
-    </body>
+            </div>
+            
+        </div>
+        <div class="copyright-container">
+            <div class="copyright">
+                <p class="muted">&copy; 2025 Brits Web Solutions. All rights reserved.</p>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
 </html>
