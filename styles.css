@@ -95,15 +95,17 @@ a {
 }
 
 .hero-content h1 {
-    font-size: 40px;
+    font-size: 45px;
     color: #003554;
     padding-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 25px;
     color: #00A6FB;
     padding-bottom: 20px;
+    width: 900px;
+
 }
 
 .btn-primary {
@@ -112,6 +114,7 @@ a {
     background-color: #0582CA;
     padding: 5px 8px;
     border-radius: 8px;
+    font-size: 20px;
 }
 
 .btn-primary:hover {
