@@ -461,10 +461,15 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     padding: 30px 35px;
 }
+
+.portfolio-grid .card p {
+    font-size: 18px;
+}
+
 
 .contact-form-container {
     display: inline-block;
