@@ -382,12 +382,12 @@ a {
 }
 
 .page-hero .container h1 {
-    font-size: 40px;
+    font-size: 50px;
     color: #003554;
 }
 
 .page-hero .container p {
-    font-size: 20px;
+    font-size: 25px;
     color: #0582CA;
     padding-top: 20px;
     width: 300px;
@@ -407,8 +407,9 @@ a {
 }
 
 .about-section .container p {
-    font-size: 18px;
-    padding: 10px 0;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 
 }
 
