@@ -33,3 +33,22 @@ export async function handler(event) {
 
   return { statusCode: 200, body: "Emails sent!" };
 }
+
+document.getElementById("pricingForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    selectedPlan: form.selectedPlan.value,
+    message: form.message.value
+  };
+
+  const res = await fetch("/.netlify/functions/sendPricingEmail", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
+
+  if (res.ok) alert("Thanks! Your request has been sent.");
+  else alert("Oops, something went wrong. Please try again.");
+});
