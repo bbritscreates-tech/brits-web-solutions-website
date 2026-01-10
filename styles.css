@@ -178,18 +178,25 @@ a {
 
 .footer-content {
     flex: 1;
-    border-right: 1px solid #cbd5e1;
-    height: 230px;
+    height: 100%;
     justify-items: center;
-}
-
-.footer-container .no-border {
-    border-right: none;
 }
 
 
 .footer-content .contact h3 {
     font-size: 25px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-content h3 {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    font-size: 18px;
     color: #fff;
     margin-bottom: 15px;
 }
@@ -265,13 +272,6 @@ a {
         cursor: pointer;
     }
 
-    /* Hide hamburger on desktop */
-    @media (min-width: 769px) {
-        .menu-toggle {
-            display: none;
-        }
-    }
-
     /* Hero section */
     .hero {
         height: 280px;
@@ -325,6 +325,67 @@ a {
         font-size: 0.9rem;
     }
 }
+    /* Hide hamburger on desktop */
+@media (min-width: 769px) {
+    .menu-toggle {
+            display: none;
+    }
+}       
+           
+
+    /* Hero section */
+    .hero {
+        height: 280px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .muted {
+        font-size: 0.9rem;
+    }
+
 
 /* Extra small phones (max 480px) */
 @media (max-width: 480px) {
@@ -473,7 +534,7 @@ a {
 
 .contact-form-container {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 130px;
 }
 
 form {

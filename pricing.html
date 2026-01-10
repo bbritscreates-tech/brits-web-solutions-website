@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Pricing | Small Business Web Design & Maintenance</title>
+    <title>Website Pricing | Affordable Web Design for Small Businesses in South Africa</title>
 
-    <meta name="description"
-        content="Affordable website pricing for small business websites, e-commerce stores, and website maintenance & hosting. Transparent monthly and yearly plans." />
+
+    <meta name="description" content="Affordable website design, e-commerce development, and monthly website maintenance for small businesses in South Africa. Clear pricing, no surprises.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -70,7 +71,8 @@
                     <p class="price" data-monthly="R799" data-yearly="R8,150">
                         <strong>R799</strong>
                     </p>
-                    <a href="#contact" class="btn">Get a Free Quote</a>
+                    <a href="#contact" class="btn" data-plan="Starter Website">Request This Plan</a>
+
                 </article>
 
                 <article class="pricing-card fade-in">
@@ -84,7 +86,8 @@
                     <p class="price" data-monthly="R1,299" data-yearly="R13,250">
                         <strong>R1,299</strong>
                     </p>
-                    <a href="#contact" class="btn">Let’s Build My Website</a>
+                    <a href="#contact" class="btn" data-plan="Business Website">Request This Plan</a>
+
                 </article>
 
                 <article class="pricing-card fade-in">
@@ -98,7 +101,7 @@
                     <p class="price" data-monthly="R1,999" data-yearly="R20,400">
                         <strong>R1,999</strong>
                     </p>
-                    <a href="#contact" class="btn">Start Selling Online</a>
+                    <a href="#contact" class="btn" data-plan="E-Commerce Store">Request This Plan</a>
                 </article>
 
             </div>
@@ -108,48 +111,75 @@
         <section class="pricing-section alt">
             <h2>Website Maintenance & Hosting Plans</h2>
             <p class="section-intro">
-                Reliable website maintenance, security updates, and hosting for peace of mind.
-            </p>
+  Ongoing website care so your site stays secure, fast, and stress-free.
+</p>
 
             <div class="pricing-grid">
 
                 <article class="pricing-card fade-in">
                     <h3>Basic Care</h3>
                     <ul>
-                        <li>Updates & backups</li>
-                        <li>Security monitoring</li>
+                        <li>Monthly updates & security checks</li>
+                        <li>Weekly backups</li>
+                        <li>Up to 30 minutes of content edits</li>
+                        <li>Email support</li>
+                        <li>Basic uptime monitoring</li>
                     </ul>
                     <p class="price" data-monthly="R299" data-yearly="R3,050">
                         <strong>R299</strong>
                     </p>
-                    <a href="#contact" class="btn">Choose Basic Care</a>
+                    <a href="#contact" class="btn" data-plan="Basic Care">Request This Plan</a>
                 </article>
 
                 <article class="pricing-card featured fade-in">
                     <h3>Business Care</h3>
                     <ul>
-                        <li>Content updates</li>
-                        <li>Performance monitoring</li>
-                        <li>Priority support</li>
+                        <li>Everything in Basic</li>
+                        <li>Up to 1 hour of updates per month</li>
+                        <li>Performance monitoringt</li>
+                        <li>Priority email support</li>
                     </ul>
                     <p class="price" data-monthly="R499" data-yearly="R5,100">
                         <strong>R499</strong>
                     </p>
-                    <a href="#contact" class="btn">Choose Business Care</a>
+                    <a href="#contact" class="btn" data-plan="Business Care">Request This Plan</a>
                 </article>
 
                 <article class="pricing-card fade-in">
                     <h3>Full Care</h3>
                     <ul>
-                        <li>Unlimited small changes</li>
-                        <li>E-commerce support</li>
+                        <li>Everything in Business</li>
+                        <li>Up to 2 hours of updates per month</li>
+                        <li>Uptime monitoring</li>
+                        <li>Emergency support</li>
                     </ul>
                     <p class="price" data-monthly="R799" data-yearly="R8,150">
                         <strong>R799</strong>
                     </p>
-                    <a href="#contact" class="btn">Get Full Care</a>
+                    <a href="#contact" class="btn" data-plan="Full Care">Request This Plan</a>
                 </article>
 
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <p style="font-size:14px;opacity:0.8;text-align:center;">
+  By subscribing to a maintenance plan, you agree to our
+  <a href="terms.html">Terms & Conditions</a>.
+</p>
+
+                <p>“How it works”
+
+• Projects start after final scope approval
+• Timelines depend on content readiness and feedback
+• Revisions are included unless stated otherwise
+• Hosting and maintenance are billed separately
+• Ongoing plans can be cancelled with notice</p>
+            </div>
+            <div>
+                <p>Maintenance plans are billed monthly and can be cancelled with 30 days’ notice.</p>
+                <p>Every project starts with a short consultation to confirm scope, timeline, and final pricing.</p>
             </div>
         </section>
 
@@ -175,21 +205,30 @@
             </div>
             <div class="footer-content no-border">
                 <div class="contact-form-container" id="contact">
-                    <form name="contact" method="POST" netlify>
-                        <p>
-                            <label>Your Name: <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                            <label>Your Email: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <label>Message: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                            <button class="form-btn" type="submit">Send</button>
-                        </p>
-                    </form>
-                </div>
+  <form name="contact" method="POST" data-netlify="true">
+    <!-- Hidden Netlify input -->
+    <input type="hidden" name="form-name" value="contact">
+    <input type="hidden" name="selected_plan" id="selectedPlan">
+
+    <p>
+      <label>Your Name: <input type="text" name="name" required /></label>
+    </p>
+    <p>
+      <label>Your Email: <input type="email" name="email" required /></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message" required></textarea></label>
+    </p>
+    <p>
+      <button class="form-btn" type="submit">Send</button>
+    </p>
+    <p style="font-size:14px;opacity:0.8;text-align:center;">
+      By submitting this form, you agree to our
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </form>
+</div>
+
             </div>
 
         </div>
