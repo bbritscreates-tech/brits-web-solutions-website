@@ -206,10 +206,10 @@
             </div>
             <div class="footer-content no-border">
                 <div class="contact-form-container" id="contact">
-                    <form name="contact" id="pricingForm">
+                    <form name="contact"  method="POST" netlify>
                         <!-- Hidden Netlify input -->
-                        <input type="hidden" name="form-name" value="contact">
-                        <input type="hidden" name="selected_plan" id="selectedPlan">
+                        <input type="hidden" id="selectedPlan" name="selected_plan" value="">
+                        
 
                         <p>
                             <label>Your Name: <input type="text" name="name" required /></label>

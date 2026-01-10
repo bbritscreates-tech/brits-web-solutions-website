@@ -1,4 +1,4 @@
-// Billing toggle logic (your existing code)
+// Billing toggle logic
 const toggle = document.getElementById("billingToggle");
 const prices = document.querySelectorAll(".price");
 
@@ -9,37 +9,47 @@ toggle.addEventListener("change", () => {
   });
 });
 
-// Contact form submission logic
+// Contact form
 const contactForm = document.querySelector('#contact form');
+const selectedPlanInput = document.getElementById('selectedPlan');
 
 // Fill hidden field when plan button clicked
 document.querySelectorAll('.pricing-card .btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.getElementById('selectedPlan').value = btn.dataset.plan;
-    // optionally scroll to footer
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent default anchor behavior
+    selectedPlanInput.value = btn.dataset.plan;
+    // Scroll to form
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   });
 });
 
+// Submit form
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   const formData = {
     name: contactForm.name.value,
     email: contactForm.email.value,
-    selected_plan: document.getElementById('selectedPlan').value || "General Inquiry",
+    selected_plan: selectedPlanInput.value || "General Inquiry",
     message: contactForm.message.value
   };
 
-  const res = await fetch("/.netlify/functions/sendPricingEmail", {
-    method: "POST",
-    body: JSON.stringify(formData)
-  });
+  try {
+    const res = await fetch("/.netlify/functions/sendPricingEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
 
-  if (res.ok) {
-    alert("Thank you! Your message has been sent.");
-    contactForm.reset();
-    document.getElementById('selectedPlan').value = '';
-  } else {
-    alert("Oops! Something went wrong.");
+    if (res.ok) {
+      alert("Thank you! Your message has been sent.");
+      contactForm.reset();
+      selectedPlanInput.value = "";
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Oops! Something went wrong. Please try again.");
   }
 });
