@@ -1,0 +1,5 @@
+[[plugins]]
+  package = "@netlify/plugin-emails"
+
+[functions]
+  included_files = ["./netlify/functions/assets/*.pdf"] # optional, remove if no attachments
