@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/logo/logo.png";
+import logo from "../assets/logo/Logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
