@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brits Web Solutions | Modern Web Design & Development</title>
+    <meta
+      name="description"
+      content="Brits Web Solutions creates modern, high-performance websites and digital experiences that help businesses grow. Based in South Africa."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#0066FF",
+              ink: "#04060A",
+              surface: "#0B111E",
+              elevated: "#131C2E",
+              border: "#212F4C",
+              muted: "#8F9FB8",
+              faint: "#4F5F7A",
+              card: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            keyframes: {
+              scroll: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+            animation: {
+              scroll: "scroll 30s linear infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/css">
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #04060a;
+        color: #eaf1ff;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .display-font {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+      }
+      .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #04060a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #212f4c;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0066ff;
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-x-hidden">
+    <header
+      class="sticky top-0 z-[100] w-full px-4 md:px-8 py-6 flex justify-center bg-ink"
+    >
+      <nav class="w-full max-w-[1440px] flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <img
+              src="images/brits-Logo-symbol.png"
+              alt="Brits Web Solutions"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col leading-none">
+            <span
+              class="display-font text-xl font-bold tracking-tight text-white uppercase"
+              >Brits</span
+            >
+            <span
+              class="text-[10px] text-brand font-bold uppercase tracking-[0.2em]"
+              >Web Solutions</span
+            >
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="nav-link relative">Home</a>
+          <a href="#about" class="nav-link relative">About</a>
+          <a href="#services" class="nav-link relative">Services</a>
+          <a href="#portfolio" class="nav-link relative">Portfolio</a>
+          <a href="#process" class="nav-link relative">Process</a>
+          <a href="#contact" class="nav-link relative">Contact</a>
+        </div>
+
+        <div class="hidden lg:flex items-center">
+          <button
+            class="bg-brand text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:opacity-90 transition-all flex items-center gap-2"
+          >
+            Get a Quote <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </button>
+        </div>
+
+        <button class="lg:hidden text-white text-xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="relative h-[700px] flex items-center px-4 md:px-8 overflow-hidden"
+      >
+        <!-- Background Image Layer -->
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover object-right opacity-100"
+            src="/images/laptop_mockup.png"
+            alt="Hero Background"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent"
+          ></div>
+        </div>
+
+        <div class="max-w-[1440px] mx-auto w-full relative z-10">
+          <div class="max-w-2xl space-y-8">
+            <p class="text-brand text-xs font-bold uppercase tracking-[0.2em]">
+              MODERN WEBSITES. SMART SOLUTIONS.
+            </p>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white">
+              We Build Websites That <span class="text-brand">Grow</span> Your
+              Business.
+            </h1>
+            <p class="text-muted text-lg md:text-xl leading-relaxed">
+              Brits Web Solutions helps businesses establish a strong online
+              presence with modern, responsive websites and digital solutions
+              that deliver results.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#services"
+                class="bg-brand text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
+              >
+                Our Services <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a
+                href="#portfolio"
+                class="group flex items-center gap-3 border border-white/20 px-8 py-3 rounded-lg font-semibold hover:border-white transition-colors text-white"
+              >
+                <i class="fa-solid fa-play text-xs"></i>
+                View Our Work
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Bar -->
+      <section id="about" class="px-4 md:px-8 -mt-12 mb-24 relative z-10">
+        <div
+          class="max-w-[1200px] mx-auto bg-card rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/30"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-gray-900"
+          >
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl"
+              >
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+              <h3 class="text-xl font-bold">Modern Design</h3>
+              <p class="text-gray-500 text-sm">
+                Clean, contemporary layouts built around your brand identity.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl"
+              >
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h3 class="text-xl font-bold">Mobile Responsive</h3>
+              <p class="text-gray-500 text-sm">
+                Flawless experiences across every device and screen size.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl"
+              >
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3 class="text-xl font-bold">Fast & Optimised</h3>
+              <p class="text-gray-500 text-sm">
+                Lightning load times and clean code that search engines love.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl"
+              >
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="text-xl font-bold">Secure & Reliable</h3>
+              <p class="text-gray-500 text-sm">
+                Robust hosting and maintenance so your site stays up and safe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-24 px-4 md:px-8">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+            <div class="lg:sticky lg:top-32 space-y-6">
+              <p
+                class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+              >
+                WHAT WE DO
+              </p>
+              <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                Web Solutions That <span class="text-brand">Work For You</span>
+              </h2>
+              <p class="text-muted text-lg">
+                Full range of web services to help your business reach more
+                customers and grow online.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-3 bg-brand text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
+              >
+                Explore All Services <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="bg-surface border border-border p-8 rounded-3xl group hover:border-brand transition-colors duration-500"
+              >
+                <i
+                  class="fa-solid fa-pen-to-square text-4xl text-brand mb-6 block"
+                ></i>
+                <h3 class="text-xl font-bold mb-4">Website Design</h3>
+                <p class="text-muted text-sm leading-relaxed">
+                  Custom, modern websites designed to impress and convert.
+                </p>
+              </div>
+              <div
+                class="bg-surface border border-border p-8 rounded-3xl group hover:border-brand transition-colors duration-500"
+              >
+                <i class="fa-solid fa-code text-4xl text-brand mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-4">Website Development</h3>
+                <p class="text-muted text-sm leading-relaxed">
+                  Fast, secure and scalable websites built with the latest
+                  technologies.
+                </p>
+              </div>
+              <div
+                class="bg-surface border border-border p-8 rounded-3xl group hover:border-brand transition-colors duration-500"
+              >
+                <i
+                  class="fa-solid fa-cart-shopping text-4xl text-brand mb-6 block"
+                ></i>
+                <h3 class="text-xl font-bold mb-4">E-Commerce Solutions</h3>
+                <p class="text-muted text-sm leading-relaxed">
+                  Online stores that are easy to manage and built to increase
+                  sales.
+                </p>
+              </div>
+              <div
+                class="bg-surface border border-border p-8 rounded-3xl group hover:border-brand transition-colors duration-500"
+              >
+                <i
+                  class="fa-solid fa-chart-line text-4xl text-brand mb-6 block"
+                ></i>
+                <h3 class="text-xl font-bold mb-4">SEO & Performance</h3>
+                <p class="text-muted text-sm leading-relaxed">
+                  Improve your visibility on Google and attract the right
+                  customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <!-- Portfolio -->
+      <section id="portfolio" class="py-24 px-4 md:px-8">
+        <div class="max-w-[1440px] mx-auto">
+          <div
+            class="bg-card rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/30"
+          >
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-16"
+            >
+              <div class="space-y-4">
+                <p
+                  class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+                >
+                  OUR WORK
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                  Recent <span class="text-brand">Projects</span>
+                </h2>
+
+                <p class="text-gray-500 max-w-xl">
+                  A selection of websites we've designed and developed for
+                  businesses across different industries.
+                </p>
+              </div>
+
+              <a
+                href="portfolio.html"
+                class="border border-brand text-brand rounded-full px-8 py-3 font-semibold hover:bg-brand hover:text-white transition-all"
+              >
+                View All
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/works-of-faith.png"
+                    alt="Project 1"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Works of Faith
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Charity & Non-Profit</p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/spectrarig.png"
+                    alt="Project 2"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    SpectraRig
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">E-Commerce Website</p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/law-firm.png"
+                    alt="Project 3"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Law Firm Website
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Legal Services</p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/salon.png"
+                    alt="Project 4"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Salon Website
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Business Website</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Process -->
+      <section id="process" class="py-24 px-4 md:px-8">
+        <div class="max-w-[1440px] mx-auto">
+          <!-- Heading -->
+
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <p class="text-brand text-xs font-bold uppercase tracking-[0.2em]">
+              OUR PROCESS
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+              From Idea to
+              <span class="text-brand">Launch</span>
+            </h2>
+
+            <p class="text-muted text-lg">
+              We keep the process simple, transparent and collaborative,
+              ensuring your website is delivered on time and built to help your
+              business grow.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                01
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Discovery</h3>
+
+              <p class="text-muted leading-relaxed">
+                We learn about your business, your goals and your audience so we
+                can create the right solution.
+              </p>
+            </div>
+
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                02
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Design</h3>
+
+              <p class="text-muted leading-relaxed">
+                Beautiful, modern layouts are designed around your brand while
+                keeping user experience the top priority.
+              </p>
+            </div>
+
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                03
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Development</h3>
+
+              <p class="text-muted leading-relaxed">
+                We build your website using clean, responsive code that's fast,
+                secure and optimised for search engines.
+              </p>
+            </div>
+
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                04
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Launch & Support</h3>
+
+              <p class="text-muted leading-relaxed">
+                After testing and approval we launch your website and continue
+                supporting you with updates, hosting and maintenance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <!-- Contact -->
+      <section id="contact" class="py-24 px-4 md:px-8 bg-brand text-white">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Left Side -->
+
+            <div>
+              <p
+                class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+              >
+                GET IN TOUCH
+              </p>
+
+              <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">
+                Let's Build Something
+                <span class="text-brand">Amazing.</span>
+              </h2>
+
+              <p class="text-white/80 text-lg leading-relaxed mb-10">
+                Whether you need a brand-new website, an online store, or want
+                to improve your existing site, we'd love to hear about your
+                project.
+              </p>
+
+              <div class="space-y-8">
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-brand flex items-center justify-center text-white"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold text-xl mb-1">Email</h4>
+
+                    <p class="text-white/80">brits.web.solutions.sa@gmail.com</p>
+                  </div>
+                </div>
+
+                <!--<div class="flex items-start gap-5">
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-brand flex items-center justify-center text-white"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold text-xl mb-1">Phone</h4>
+
+                    <p class="text-white/80">+27 82 123 4567</p>
+                  </div>
+                </div> -->
+
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-brand flex items-center justify-center text-white"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold text-xl mb-1">Location</h4>
+
+                    <p class="text-white/80">Gauteng, South Africa</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side -->
+
+            <div
+              class="bg-card rounded-3xl p-8 md:p-10 shadow-2xl shadow-black/20"
+            >
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                class="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+
+                <p class="hidden">
+                  <label
+                    >Don't fill this out:
+                    <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="John Smith"
+                    class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:border-brand focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="john@email.com"
+                    class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:border-brand focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">
+                    Service Required
+                  </label>
+
+                  <select
+                    name="service"
+                    class="w-full rounded-xl border border-gray-300 px-5 py-4 focus:border-brand focus:outline-none"
+                  >
+                    <option>Website Design</option>
+                    <option>E-Commerce Website</option>
+                    <option>Website Redesign</option>
+                    <option>SEO</option>
+                    <option>Website Maintenance</option>
+                    <option>Hosting</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">
+                    Tell us about your project
+                  </label>
+
+                  <textarea
+                    name="message"
+                    rows="6"
+                    required
+                    placeholder="Tell us what you're looking for..."
+                    class="w-full rounded-xl border border-gray-300 px-5 py-4 resize-none focus:border-brand focus:outline-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-brand text-white py-4 rounded-xl font-semibold hover:opacity-90 transition"
+                >
+                  Send Message
+                  <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink pt-20 pb-10 px-4 md:px-8 border-t border-border">
+      <div class="max-w-[1440px] mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <div class="space-y-6">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex items-center justify-center"
+              >
+                <img
+              src="images/brits-Logo-symbol.png"
+              alt="Brits Web Solutions"
+              class="w-full h-full object-contain"
+            />
+              </div>
+              <div class="flex flex-col leading-none">
+                <span
+                  class="display-font text-xl font-bold text-white uppercase"
+                  >Brits</span
+                >
+                <span
+                  class="text-[10px] text-brand font-bold uppercase tracking-[0.2em]"
+                  >Web Solutions</span
+                >
+              </div>
+            </div>
+            <p class="text-muted text-sm max-w-xs">
+              Helping businesses grow online with modern websites and smart
+              digital solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-muted text-sm">
+              <li><a href="#" class="hover:text-brand">Home</a></li>
+              <li><a href="#services" class="hover:text-brand">Services</a></li>
+              <li>
+                <a href="#portfolio" class="hover:text-brand">Portfolio</a>
+              </li>
+              <li><a href="#contact" class="hover:text-brand">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Services</h4>
+            <ul class="space-y-4 text-muted text-sm">
+              <li>Web Design</li>
+              <li>Development</li>
+              <li>E-Commerce</li>
+              <li>SEO</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Contact</h4>
+            <ul class="space-y-4 text-muted text-sm">
+              <!-- <li class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-brand"></i> 082 123 4567
+              </li> -->
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-brand"></i>
+                brits.web.solutions.sa@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-border pt-10 text-center">
+          <p class="text-faint text-xs">
+            © 2026 Brits Web Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>
