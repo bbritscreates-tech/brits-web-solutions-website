@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Social Media Management | Brits Web Solutions</title>
+
+    <meta
+      name="description"
+      content="Professional social media management for businesses. Brits Web Solutions helps businesses build their online presence with consistent content, engaging social media and strategic management."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#0066FF",
+              ink: "#04060A",
+              surface: "#0B111E",
+              elevated: "#131C2E",
+              border: "#212F4C",
+              muted: "#8F9FB8",
+              faint: "#4F5F7A",
+              card: "#F8FAFC",
+            },
+
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="antialiased overflow-x-hidden bg-ink text-white">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header
+  class="sticky top-0 z-[100] w-full px-4 md:px-8 py-6 bg-ink"
+>
+  <nav class="w-full max-w-[1440px] mx-auto">
+
+    <!-- TOP NAV -->
+    <div class="flex items-center justify-between">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <img
+            src="images/brits-Logo-symbol.png"
+            alt="Brits Web Solutions"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
+        <div class="flex flex-col leading-none">
+          <span
+            class="display-font text-xl font-bold tracking-tight text-white uppercase"
+          >
+            Brits
+          </span>
+
+          <span
+            class="text-[10px] text-brand font-bold uppercase tracking-[0.2em]"
+          >
+            Web Solutions
+          </span>
+        </div>
+      </div>
+
+      <!-- DESKTOP NAV -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="nav-link relative">Home</a>
+        <a href="index.html#about" class="nav-link relative">About</a>
+        <a href="index.html#services" class="nav-link relative">Services</a>
+        <a href="index.html#social" class="nav-link relative">Social Media</a>
+        <a href="index.html#portfolio" class="nav-link relative">Portfolio</a>
+        <a href="index.html#process" class="nav-link relative">Process</a>
+        <a href="index.html#contact" class="nav-link relative">Contact</a>
+      </div>
+
+      <!-- DESKTOP BUTTON -->
+      <div class="hidden lg:flex items-center">
+        <a
+          href="index.html#contact"
+          class="bg-brand text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:opacity-90 transition-all flex items-center gap-2"
+        >
+          Get a Quote
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button
+        id="mobile-menu-button"
+        type="button"
+        class="lg:hidden text-white text-xl"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="hidden lg:hidden pt-6 pb-2"
+    >
+      <div class="flex flex-col gap-5 border-t border-border pt-6">
+
+        <a href="index.html" class="mobile-nav-link text-white">
+          Home
+        </a>
+
+        <a href="index.html#about" class="mobile-nav-link text-white">
+          About
+        </a>
+
+        <a href="index.html#services" class="mobile-nav-link text-white">
+          Services
+        </a>
+
+        <a href="index.html#social" class="mobile-nav-link text-white">
+          Social Media
+        </a>
+
+        <a href="index.html#portfolio" class="mobile-nav-link text-white">
+          Portfolio
+        </a>
+
+        <a href="index.html#process" class="mobile-nav-link text-white">
+          Process
+        </a>
+
+        <a href="index.html#contact" class="mobile-nav-link text-white">
+          Contact
+        </a>
+
+        <a
+          href="index.html#contact"
+          class="bg-brand text-white rounded-full px-6 py-3 text-sm font-semibold text-center mt-2"
+        >
+          Get a Quote
+        </a>
+
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+    <main>
+
+      <!-- =========================
+           HERO
+      ========================== -->
+
+      <section
+        class="relative min-h-[650px] flex items-center px-4 md:px-8 overflow-hidden"
+      >
+
+        <!-- Background -->
+
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover object-right opacity-100"
+            src="/images/social_mockup.png"
+            alt="Social Hero Background"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent"
+          ></div>
+        </div>
+
+
+        <div
+          class="max-w-[1440px] mx-auto w-full relative z-10"
+        >
+
+          <div class="max-w-3xl space-y-8">
+
+            <p
+              class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+            >
+              SOCIAL MEDIA MANAGEMENT
+            </p>
+
+            <h1
+              class="text-5xl md:text-7xl font-bold leading-tight text-white"
+            >
+              Build a Social Presence That
+              <span class="text-brand">Works.</span>
+            </h1>
+
+            <p
+              class="text-muted text-lg md:text-xl leading-relaxed max-w-2xl"
+            >
+              We help businesses stay consistent, professional and
+              visible online with strategic social media management and
+              engaging content.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+
+              <a
+                href="#packages"
+                class="bg-brand text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
+              >
+                View Packages
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+              </a>
+
+              <a
+                href="index.html#contact"
+                class="group flex items-center gap-3 border border-white/20 px-8 py-3 rounded-lg font-semibold hover:border-white transition-colors text-white"
+              >
+                Let's Talk
+
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           INTRO
+      ========================== -->
+
+      <section class="px-4 md:px-8 py-24">
+
+        <div
+          class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+
+          <div class="space-y-6">
+
+            <p
+              class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+            >
+              WHY SOCIAL MEDIA?
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+              Your Business Deserves More Than an
+              <span class="text-brand">Inactive Feed.</span>
+            </h2>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-muted text-lg leading-relaxed">
+              Social media is often the first place potential customers
+              discover a business. We help you maintain a consistent,
+              professional presence without having to spend your time
+              creating posts, planning content and managing your pages.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           SERVICES
+      ========================== -->
+
+      <section
+        class="py-24 px-4 md:px-8 bg-surface"
+      >
+
+        <div class="max-w-[1200px] mx-auto">
+
+          <div class="text-center max-w-2xl mx-auto mb-16 space-y-5">
+
+            <p
+              class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+            >
+              WHAT WE DO
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold">
+              Everything Your Social Presence
+              <span class="text-brand">Needs.</span>
+            </h2>
+
+            <p class="text-muted">
+              From planning and content creation to scheduling and
+              performance tracking, we handle the day-to-day work.
+            </p>
+
+          </div>
+
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+
+            <!-- Card -->
+
+            <div
+              class="bg-ink border border-border p-8 rounded-3xl hover:border-brand transition-colors duration-500"
+            >
+
+              <i
+                class="fa-solid fa-calendar-days text-4xl text-brand mb-6 block"
+              ></i>
+
+              <h3 class="text-xl font-bold mb-4">
+                Content Planning
+              </h3>
+
+              <p class="text-muted text-sm leading-relaxed">
+                Strategic monthly content planning designed around
+                your business, audience and goals.
+              </p>
+
+            </div>
+
+
+            <div
+              class="bg-ink border border-border p-8 rounded-3xl hover:border-brand transition-colors duration-500"
+            >
+
+              <i
+                class="fa-solid fa-pen-nib text-4xl text-brand mb-6 block"
+              ></i>
+
+              <h3 class="text-xl font-bold mb-4">
+                Content Creation
+              </h3>
+
+              <p class="text-muted text-sm leading-relaxed">
+                Professional social media graphics and written
+                content that keep your brand looking consistent.
+              </p>
+
+            </div>
+
+
+            <div
+              class="bg-ink border border-border p-8 rounded-3xl hover:border-brand transition-colors duration-500"
+            >
+
+              <i
+                class="fa-solid fa-clock text-4xl text-brand mb-6 block"
+              ></i>
+
+              <h3 class="text-xl font-bold mb-4">
+                Scheduling
+              </h3>
+
+              <p class="text-muted text-sm leading-relaxed">
+                Your content is organised and scheduled so your
+                social pages stay active and consistent.
+              </p>
+
+            </div>
+
+
+            <div
+              class="bg-ink border border-border p-8 rounded-3xl hover:border-brand transition-colors duration-500"
+            >
+
+              <i
+                class="fa-solid fa-hashtag text-4xl text-brand mb-6 block"
+              ></i>
+
+              <h3 class="text-xl font-bold mb-4">
+                Hashtag Strategy
+              </h3>
+
+              <p class="text-muted text-sm leading-relaxed">
+                Relevant hashtags and content strategies designed
+                to help your posts reach the right audience.
+              </p>
+
+            </div>
+
+
+            <div
+              class="bg-ink border border-border p-8 rounded-3xl hover:border-brand transition-colors duration-500"
+            >
+
+              <i
+                class="fa-solid fa-comments text-4xl text-brand mb-6 block"
+              ></i>
+
+              <h3 class="text-xl font-bold mb-4">
+                Community Engagement
+              </h3>
+
+              <p class="text-muted text-sm leading-relaxed">
+                Help your business stay connected with customers
+                and respond to engagement across your platforms.
+              </p>
+
+            </div>
+
+
+            <div
+              class="bg-ink border border-border p-8 rounded-3xl hover:border-brand transition-colors duration-500"
+            >
+
+              <i
+                class="fa-solid fa-chart-line text-4xl text-brand mb-6 block"
+              ></i>
+
+              <h3 class="text-xl font-bold mb-4">
+                Monthly Reporting
+              </h3>
+
+              <p class="text-muted text-sm leading-relaxed">
+                Track important performance metrics and understand
+                how your social presence is developing.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PLATFORMS
+      ========================== -->
+
+      <section class="py-24 px-4 md:px-8">
+
+        <div class="max-w-[1000px] mx-auto text-center">
+
+          <p
+            class="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-5"
+          >
+            PLATFORMS
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Social Platforms We Can
+            <span class="text-brand">Manage.</span>
+          </h2>
+
+          <p class="text-muted max-w-2xl mx-auto mb-12">
+            We can help businesses maintain a consistent presence
+            across the platforms that matter most to their audience.
+          </p>
+
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-6"
+          >
+
+            <div
+              class="border border-border bg-surface rounded-3xl p-8 hover:border-brand transition"
+            >
+
+              <i class="fa-brands fa-facebook text-4xl text-brand mb-4"></i>
+
+              <h3 class="font-bold">
+                Facebook
+              </h3>
+
+            </div>
+
+
+            <div
+              class="border border-border bg-surface rounded-3xl p-8 hover:border-brand transition"
+            >
+
+              <i class="fa-brands fa-instagram text-4xl text-brand mb-4"></i>
+
+              <h3 class="font-bold">
+                Instagram
+              </h3>
+
+            </div>
+
+
+            <div
+              class="border border-border bg-surface rounded-3xl p-8 hover:border-brand transition"
+            >
+
+              <i class="fa-brands fa-tiktok text-4xl text-brand mb-4"></i>
+
+              <h3 class="font-bold">
+                TikTok
+              </h3>
+
+            </div>
+
+
+            <div
+              class="border border-border bg-surface rounded-3xl p-8 hover:border-brand transition"
+            >
+
+              <i class="fa-brands fa-linkedin text-4xl text-brand mb-4"></i>
+
+              <h3 class="font-bold">
+                LinkedIn
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PACKAGES
+      ========================== -->
+
+      <section
+        id="packages"
+        class="py-24 px-4 md:px-8 bg-surface"
+      >
+
+        <div class="max-w-[1200px] mx-auto">
+
+          <div class="text-center max-w-2xl mx-auto mb-16 space-y-5">
+
+            <p
+              class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+            >
+              MONTHLY MANAGEMENT
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold">
+              Choose the Level of
+              <span class="text-brand">Support You Need.</span>
+            </h2>
+
+            <p class="text-muted">
+              Flexible monthly packages for businesses at different
+              stages of growth.
+            </p>
+
+          </div>
+
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-6"
+          >
+
+            <!-- Starter -->
+
+            <div
+              class="bg-ink border border-border rounded-3xl p-8"
+            >
+
+              <p
+                class="text-brand text-xs font-bold uppercase tracking-wider"
+              >
+                STARTER
+              </p>
+
+              <h3 class="text-2xl font-bold mt-3">
+                Social Starter
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                A simple solution for businesses that need to stay
+                consistently active online.
+              </p>
+
+              <div class="mt-8">
+
+                <span class="text-4xl font-bold">
+                  From R2,500
+                </span>
+
+                <span class="text-muted">
+                  /month
+                </span>
+
+              </div>
+
+              <ul class="space-y-4 mt-8 text-sm text-muted">
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  2 social platforms
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  8 posts per month per <span class="md:ml-6">platform</span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Branded graphics
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Content scheduling
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Monthly report
+                </li>
+
+              </ul>
+
+              <a
+                href="index.html#contact"
+                class="mt-24 block text-center border border-border rounded-xl py-3 font-semibold hover:border-brand hover:text-brand transition"
+              >
+                Get Started
+              </a>
+
+            </div>
+
+
+            <!-- Growth -->
+
+            <div
+              class="bg-ink border-2 border-brand rounded-3xl p-8 relative"
+            >
+
+              <span
+                class="absolute top-5 right-5 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full"
+              >
+                POPULAR
+              </span>
+
+              <p
+                class="text-brand text-xs font-bold uppercase tracking-wider"
+              >
+                GROWTH
+              </p>
+
+              <h3 class="text-2xl font-bold mt-3">
+                Social Growth
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                For businesses ready to build a stronger and more
+                consistent social media presence.
+              </p>
+
+              <div class="mt-8">
+
+                <span class="text-4xl font-bold">
+                  From R4,000
+                </span>
+
+                <span class="text-muted">
+                  /month
+                </span>
+
+              </div>
+
+              <ul class="space-y-4 mt-8 text-sm text-muted">
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  3 social platforms
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  12 posts per month per <span class="md:ml-6">platform</span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Branded graphics
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Content calendar
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Scheduling
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Monthly reporting
+                </li>
+
+              </ul>
+
+              <a
+                href="index.html#contact"
+                class="mt-14 block text-center bg-brand text-white rounded-xl py-3 font-semibold hover:opacity-90 transition"
+              >
+                Get Started
+              </a>
+
+            </div>
+
+
+            <!-- Business -->
+
+            <div
+              class="bg-ink border border-border rounded-3xl p-8"
+            >
+
+              <p
+                class="text-brand text-xs font-bold uppercase tracking-wider"
+              >
+                BUSINESS
+              </p>
+
+              <h3 class="text-2xl font-bold mt-3">
+                Social Business
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                Full social media support for businesses wanting
+                consistent growth and stronger engagement.
+              </p>
+
+              <div class="mt-8">
+
+                <span class="text-4xl font-bold">
+                  From R5,500
+                </span>
+
+                <span class="text-muted">
+                  /month
+                </span>
+
+              </div>
+
+              <ul class="space-y-4 mt-8 text-sm text-muted">
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Up to 4 platforms
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  12–16 posts per month per <span class="md:ml-6">platform</span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Premium branded content
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Content strategy
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Community engagement
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Monthly performance report
+                </li>
+
+              </ul>
+
+              <a
+                href="index.html#contact"
+                class="mt-10 block text-center border border-border rounded-xl py-3 font-semibold hover:border-brand hover:text-brand transition"
+              >
+                Get Started
+              </a>
+
+            </div>
+            <div
+              class="bg-ink border border-border rounded-3xl p-8"
+            >
+
+              <p
+                class="text-brand text-xs font-bold uppercase tracking-wider"
+              >
+                PREMIUM
+              </p>
+
+              <h3 class="text-2xl font-bold mt-3">
+                Social Pro
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                Strategic social media support for businesses ready to elevate their brand, reach more customers, and drive growth.
+
+              </p>
+
+              <div class="mt-8">
+
+                <span class="text-4xl font-bold">
+                  From R8,000
+                </span>
+
+                <span class="text-muted">
+                  /month
+                </span>
+
+              </div>
+
+              <ul class="space-y-4 mt-8 text-sm text-muted">
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Up to 4 platforms
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  20 posts per month per <span class="md:ml-6">platform</span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Premium branded content
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Content strategy
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Community engagement
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check text-brand mr-2"></i>
+                  Monthly performance report
+                </li>
+
+              </ul>
+
+              <a
+                href="index.html#contact"
+                class="mt-10 block text-center border border-border rounded-xl py-3 font-semibold hover:border-brand hover:text-brand transition"
+              >
+                Get Started
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+          </div>
+
+        </div>
+        
+
+      </section>
+
+
+      <!-- =========================
+           PROCESS
+      ========================== -->
+
+      <section class="py-24 px-4 md:px-8">
+
+        <div class="max-w-[1200px] mx-auto">
+
+          <div class="text-center max-w-2xl mx-auto mb-16">
+
+            <p
+              class="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-5"
+            >
+              OUR PROCESS
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold">
+              Simple, Strategic &
+              <span class="text-brand">Consistent.</span>
+            </h2>
+
+          </div>
+
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-8"
+          >
+
+            <div class="text-center">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-2xl bg-brand/10 flex items-center justify-center text-brand text-xl font-bold"
+              >
+                01
+              </div>
+
+              <h3 class="text-xl font-bold mt-6">
+                Discover
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                We learn about your business, audience and goals.
+              </p>
+
+            </div>
+
+
+            <div class="text-center">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-2xl bg-brand/10 flex items-center justify-center text-brand text-xl font-bold"
+              >
+                02
+              </div>
+
+              <h3 class="text-xl font-bold mt-6">
+                Plan
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                We create a content strategy and monthly calendar.
+              </p>
+
+            </div>
+
+
+            <div class="text-center">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-2xl bg-brand/10 flex items-center justify-center text-brand text-xl font-bold"
+              >
+                03
+              </div>
+
+              <h3 class="text-xl font-bold mt-6">
+                Create
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                We create and prepare your branded social content.
+              </p>
+
+            </div>
+
+
+            <div class="text-center">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-2xl bg-brand/10 flex items-center justify-center text-brand text-xl font-bold"
+              >
+                04
+              </div>
+
+              <h3 class="text-xl font-bold mt-6">
+                Manage
+              </h3>
+
+              <p class="text-muted text-sm mt-3">
+                Content is scheduled, monitored and reported on.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           CTA
+      ========================== -->
+
+      <section
+        class="py-20 px-4 md:px-8 bg-brand text-white"
+      >
+
+        <div
+          class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+
+          <div>
+
+            <p
+              class="text-white/70 text-xs font-bold uppercase tracking-[0.2em] mb-3"
+            >
+              READY TO GET STARTED?
+            </p>
+
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Let's build your social presence.
+            </h2>
+
+            <p class="text-white/80 mt-3">
+              Tell us about your business and we'll discuss the right
+              social media solution for you.
+            </p>
+
+          </div>
+
+
+          <a
+            href="index.html#contact"
+            class="inline-flex items-center gap-3 border border-white/40 rounded-full px-8 py-4 font-semibold hover:bg-white hover:text-brand transition-all whitespace-nowrap"
+          >
+            Get In Touch
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="bg-ink pt-20 pb-10 px-4 md:px-8 border-t border-border">
+      <div class="max-w-[1440px] mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <div class="space-y-6">
+            <div class="flex items-center gap-2">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <img
+                  src="images/brits-Logo-symbol.png"
+                  alt="Brits Web Solutions"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div class="flex flex-col leading-none">
+                <span
+                  class="display-font text-xl font-bold text-white uppercase"
+                  >Brits</span
+                >
+                <span
+                  class="text-[10px] text-brand font-bold uppercase tracking-[0.2em]"
+                  >Web Solutions</span
+                >
+              </div>
+            </div>
+            <p class="text-muted text-sm max-w-xs">
+              Helping businesses grow online with modern websites and smart
+              digital solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-muted text-sm">
+              <li><a href="index.html#home" class="hover:text-brand">Home</a></li>
+              <li><a href="index.html#services" class="hover:text-brand">Services</a></li>
+              <li><a href="index.html#social" class="hover:text-brand">Social Media</a></li>
+              <li>
+                <a href="index.html#portfolio" class="hover:text-brand">Portfolio</a>
+              </li>
+              <li><a href="index.html#contact" class="hover:text-brand">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Services</h4>
+            <ul class="space-y-4 text-muted text-sm">
+              <li>Web Design</li>
+              <li>Development</li>
+              <li>E-Commerce</li>
+              <li>SEO</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Contact</h4>
+            <ul class="space-y-4 text-muted text-sm">
+              <!-- <li class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-brand"></i> 082 123 4567
+              </li> -->
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-brand"></i>
+                brits.web.solutions.sa@gmail.com
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61592495858473"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-3 hover:text-brand transition-colors"
+                >
+                  <i class="fa-brands fa-facebook-f text-brand"></i>
+                  Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-border pt-10 text-center">
+          <p class="text-faint text-xs">
+            © 2026 Brits Web Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
