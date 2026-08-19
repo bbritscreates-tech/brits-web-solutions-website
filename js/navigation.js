@@ -36,6 +36,14 @@ function updateActiveNav() {
         ) {
             link.classList.add("active");
         }
+
+        // About page
+        if (
+            currentPath.endsWith("/about.html") &&
+            linkPath.endsWith("/about.html")
+        ) {
+            link.classList.add("active");
+        }
     });
 
     // ----------------------------------------

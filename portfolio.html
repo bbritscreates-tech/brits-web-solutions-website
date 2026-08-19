@@ -4,10 +4,161 @@
     <head>
 
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Portfolio | Brits Web Solutions</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
+  <!-- =====================================================
+       PRIMARY SEO
+  ====================================================== -->
+
+  <title>
+    Web Design Portfolio | Website Examples | Brits Web Solutions
+  </title>
+
+  <meta
+    name="description"
+    content="Explore the Brits Web Solutions portfolio featuring modern, responsive websites and digital projects designed and developed for businesses and organisations."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="author"
+    content="Brits Web Solutions"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0066ff"
+  >
+
+  <!-- Canonical -->
+
+  <link
+    rel="canonical"
+    href="https://britswebsolutions.netlify.app/portfolio.html"
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Web Design Portfolio | Brits Web Solutions"
+  >
+
+  <meta
+    property="og:description"
+    content="Explore websites and digital projects designed and developed by Brits Web Solutions."
+  >
+
+  <meta
+    property="og:url"
+    content="https://britswebsolutions.netlify.app/portfolio.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Brits Web Solutions"
+  >
+
+  <meta
+    property="og:locale"
+    content="en_ZA"
+  >
+
+  <meta
+    property="og:image"
+    content="https://britswebsolutions.netlify.app/images/og-image.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Brits Web Solutions Web Design Portfolio"
+  >
+
+   <!-- =====================================================
+       FAVICON
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    type="image/png/ico"
+    href="images/favicon/favicon.ico"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="images/favicon/apple-touch-icon.png"
+  >
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+
+  <!-- =====================================================
+       STRUCTURED DATA
+  ====================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+
+    "@id": "https://britswebsolutions.netlify.app/portfolio.html#portfolio",
+
+    "url": "https://britswebsolutions.netlify.app/portfolio.html",
+
+    "name": "Web Design Portfolio | Brits Web Solutions",
+
+    "description": "A collection of websites and digital projects designed and developed by Brits Web Solutions.",
+
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://britswebsolutions.netlify.app/#website",
+      "name": "Brits Web Solutions",
+      "url": "https://britswebsolutions.netlify.app/"
+    },
+
+    "about": {
+      "@type": "ProfessionalService",
+      "@id": "https://britswebsolutions.netlify.app/#business",
+
+      "name": "Brits Web Solutions",
+
+      "url": "https://britswebsolutions.netlify.app/",
+
+      "logo": "https://britswebsolutions.netlify.app/images/logo.png",
+
+      "description": "Modern website design, web development, e-commerce and SEO services for businesses in South Africa.",
+
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+      },
+
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61592495858473",
+        "https://www.instagram.com/brits.web.solutions/"
+      ]
+    }
+  }
+  </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -147,11 +298,9 @@
       <!-- DESKTOP NAV -->
       <div class="hidden lg:flex items-center gap-8">
         <a href="index.html" class="nav-link relative">Home</a>
-        <a href="index.html#about" class="nav-link relative">About</a>
-        <a href="index.html#services" class="nav-link relative">Services</a>
         <a href="social-media.html" class="nav-link relative">Social Media</a>
         <a href="portfolio.html" class="nav-link relative">Portfolio</a>
-        <a href="index.html#process" class="nav-link relative">Process</a>
+        <a href="about.html" class="nav-link relative">About</a>
         <a href="index.html#contact" class="nav-link relative">Contact</a>
       </div>
 
@@ -190,24 +339,16 @@
           Home
         </a>
 
-        <a href="index.html#about" class="mobile-nav-link text-white">
-          About
-        </a>
-
-        <a href="index.html#services" class="mobile-nav-link text-white">
-          Services
-        </a>
-
         <a href="social-media.html" class="mobile-nav-link text-white">
           Social Media
         </a>
 
-        <a href="portfolio.html" class="mobile-nav-link text-white">
-          Portfolio
+        <a href="about.html" class="mobile-nav-link text-white">
+          About
         </a>
 
-        <a href="index.html#process" class="mobile-nav-link text-white">
-          Process
+        <a href="portfolio.html" class="mobile-nav-link text-white">
+          Portfolio
         </a>
 
         <a href="index.html#contact" class="mobile-nav-link text-white">
@@ -264,78 +405,270 @@
 
         </section>
 
-        <!-- ====================================== -->
-        <!-- STATS -->
-        <!-- ====================================== -->
+        
 
-        <!-- Portfolio Stats -->
         <section class="px-4 md:px-8 -mt-16 mb-24 relative z-10">
-
-            <div class="max-w-[1200px] mx-auto bg-card rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/30">
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-gray-900">
-
-                    <div class="space-y-4">
-
-                        <div class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl">
-                            <i class="fa-solid fa-folder-open"></i>
-                        </div>
-
-                        <h2 class="text-4xl font-bold text-brand">15+</h2>
-
-                        <p class="text-gray-500">
-                            Successful projects delivered across multiple industries.
-                        </p>
-
-                    </div>
-
-                    <div class="space-y-4">
-
-                        <div class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                        </div>
-
-                        <h2 class="text-4xl font-bold text-brand">100%</h2>
-
-                        <p class="text-gray-500">
-                            Fully responsive websites built for every screen size.
-                        </p>
-
-                    </div>
-
-                    <div class="space-y-4">
-
-                        <div class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-
-                        <h2 class="text-4xl font-bold text-brand">5+</h2>
-
-                        <p class="text-gray-500">
-                            Years of experience designing and developing websites.
-                        </p>
-
-                    </div>
-
-                    <div class="space-y-4">
-
-                        <div class="w-12 h-12 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-xl">
-                            <i class="fa-solid fa-headset"></i>
-                        </div>
-
-                        <h2 class="text-4xl font-bold text-brand">24/7</h2>
-
-                        <p class="text-gray-500">
-                            Ongoing support and maintenance for every client.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </section>
+
+        <!-- Social Media-->
+
+        <section class="industry-showcase" id="social-showcase">
+  <div class="showcase-container">
+
+    <div class="showcase-heading">
+      <span class="showcase-eyebrow">OUR WORK</span>
+      <h2>Social Media Content <span>Designed for Your Industry</span></h2>
+      <p>
+        Every business is different. We create social media content
+        tailored to your industry, audience and brand.
+      </p>
+    </div>
+
+    <!-- Industry Filters -->
+    <div class="industry-filters">
+      <button class="industry-btn active" data-filter="all">All</button>
+      <button class="industry-btn" data-filter="construction">Construction</button>
+      <button class="industry-btn" data-filter="legal">Legal</button>
+      <button class="industry-btn" data-filter="beauty">Beauty</button>
+      <button class="industry-btn" data-filter="real-estate">Real Estate</button>
+      <button class="industry-btn" data-filter="automotive">Automotive</button>
+      <button class="industry-btn" data-filter="professional">Professional Services</button>
+    </div>
+
+    <!-- Posts -->
+    <div class="social-post-grid">
+
+      <!-- Construction -->
+      <div class="social-card" data-category="construction">
+        <div class="post-image">
+          <img src="images/Social-showcase/Construction/project-showcase.png" alt="Construction social media concept project showcase">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>CONSTRUCTION</span>
+          <h3>Project Showcase</h3>
+          <p>Showcase completed projects and demonstrate your expertise.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="construction">
+        <div class="post-image">
+          <img src="images/Social-showcase/Construction/did-you-know.png" alt="Construction social media concept did you know?">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>CONSTRUCTION</span>
+          <h3>Did You Know?</h3>
+          <p>Educational content that helps position your business as an expert.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="construction">
+        <div class="post-image">
+          <img src="images/Social-showcase/Construction/before-after.png" alt="Construction social media concept before and after">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>CONSTRUCTION</span>
+          <h3>Before & After</h3>
+          <p>Turn your completed work into engaging visual content.</p>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="social-card" data-category="legal">
+        <div class="post-image">
+          <img src="images/Social-showcase/legal/legal-tip.png" alt="Law firm social media concept legal tip">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>LEGAL</span>
+          <h3>Legal Tip</h3>
+          <p>Simple educational posts that make complex topics easier to understand.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="legal">
+        <div class="post-image">
+          <img src="images/Social-showcase/legal/service-spotlight.png" alt="Law firm social media concept service spotlight">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>LEGAL</span>
+          <h3>Service Spotlight</h3>
+          <p>Explain your services clearly and help potential clients understand how you can help.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="legal">
+        <div class="post-image">
+          <img src="images/Social-showcase/legal/common-questions.png" alt="Law firm social media concept common questions">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>LEGAL</span>
+          <h3>Common Questions</h3>
+          <p>Answer frequently asked questions and provide useful information.</p>
+        </div>
+      </div>
+
+      <!-- Beauty -->
+      <div class="social-card" data-category="beauty">
+        <div class="post-image">
+          <img src="images/Social-showcase/beauty/service-spotlight.png" alt="Beauty salon social media concept service spotlight">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>BEAUTY</span>
+          <h3>Service Spotlight</h3>
+          <p>Show customers exactly what your business has to offer.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="beauty">
+        <div class="post-image">
+          <img src="images/Social-showcase/beauty/beauty-tips.png" alt="Beauty salon social media concept beauty tips">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>BEAUTY</span>
+          <h3>Beauty Tips</h3>
+          <p>Share useful tips that keep your audience coming back for more.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="beauty">
+        <div class="post-image">
+          <img src="images/Social-showcase/beauty/customer-results.png" alt="Beauty salon social media concept customer results">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>BEAUTY</span>
+          <h3>Customer Results</h3>
+          <p>Use visual results to showcase the quality of your services.</p>
+        </div>
+      </div>
+
+      <!-- Real Estate -->
+      <div class="social-card" data-category="real-estate">
+        <div class="post-image">
+          <img src="images/Social-showcase/Real-Estate/property-showcase.png" alt="Real estate social media concept property showcase">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>REAL ESTATE</span>
+          <h3>Property Showcase</h3>
+          <p>Turn property listings into eye-catching social media content.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="real-estate">
+        <div class="post-image">
+          <img src="images/Social-showcase/Real-Estate/property-tips.png" alt="Real estate social media concept property tips">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>REAL ESTATE</span>
+          <h3>Property Tips</h3>
+          <p>Share useful advice that attracts buyers and sellers.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="real-estate">
+        <div class="post-image">
+          <img src="images/Social-showcase/Real-Estate/market-update.png" alt="Real estate social media concept market update">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>REAL ESTATE</span>
+          <h3>Market Update</h3>
+          <p>Keep your audience informed with relevant industry information.</p>
+        </div>
+      </div>
+
+      <!-- Automotive -->
+      <div class="social-card" data-category="automotive">
+        <div class="post-image">
+          <img src="images/Social-showcase/Automotive/vehicle-spotlight.png" alt="Automotive social media concept vehicle spotlight">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>AUTOMOTIVE</span>
+          <h3>Vehicle Spotlight</h3>
+          <p>Put your vehicles and services in front of potential customers.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="automotive">
+        <div class="post-image">
+          <img src="images/Social-showcase/Automotive/maintenance-tips.png" alt="Automotive social media concept maintenance tips">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>AUTOMOTIVE</span>
+          <h3>Maintenance Tips</h3>
+          <p>Useful automotive advice can generate saves, shares and engagement.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="automotive">
+        <div class="post-image">
+          <img src="images/Social-showcase/Automotive/customer-story.png" alt="Automotive social media concept customer story">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>AUTOMOTIVE</span>
+          <h3>Customer Story</h3>
+          <p>Use customer experiences to build trust and credibility.</p>
+        </div>
+      </div>
+
+      <!-- Professional Services -->
+      <div class="social-card" data-category="professional">
+        <div class="post-image">
+          <img src="images/Social-showcase/Professional-Services/business-tip.png" alt="Professional services social media concept business tip">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>PROFESSIONAL SERVICES</span>
+          <h3>Business Tip</h3>
+          <p>Share practical information that provides value to your audience.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="professional">
+        <div class="post-image">
+          <img src="images/Social-showcase/Professional-Services/expert-insight.png" alt="Professional services social media concept expert insight">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>PROFESSIONAL SERVICES</span>
+          <h3>Expert Insight</h3>
+          <p>Demonstrate knowledge and establish your business as an authority.</p>
+        </div>
+      </div>
+
+      <div class="social-card" data-category="professional">
+        <div class="post-image">
+          <img src="images/Social-showcase/Professional-Services/why-choose-us.png" alt="Professional services social media concept why choose us">
+          <span class="concept-label">CONCEPT DESIGN</span>
+        </div>
+        <div class="post-info">
+          <span>PROFESSIONAL SERVICES</span>
+          <h3>Why Choose Us?</h3>
+          <p>Highlight the reasons customers should choose your business.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="showcase-bottom">
+      <p>Want content like this for your business?</p>
+      <a href="index.html#contact" class="showcase-cta">Let's Work Together <span>→</span></a>
+    </div>
+
+  </div>
+</section>
 
         <!-- ====================================== -->
         <!-- FEATURED PROJECT -->
@@ -403,7 +736,7 @@
             </div>
 
         </section>
-
+        
         <!-- ====================================== -->
         <!-- PROJECTS -->
         <!-- ====================================== -->
@@ -420,7 +753,7 @@
 
                         <h2 class="text-4xl font-bold">
 
-                            SpectraRig
+                            SpectraRig Concept Project
 
                         </h2>
 
@@ -461,7 +794,7 @@
 
                         <h2 class="text-4xl font-bold">
 
-                            Law Firm Website
+                            Law Firm Website Concept Project
 
                         </h2>
 
@@ -495,7 +828,7 @@
 
                         <h2 class="text-4xl font-bold">
 
-                            Natural Products
+                            Natural Products Concept Project
 
                         </h2>
 
@@ -535,7 +868,7 @@
 
                         <h2 class="text-4xl font-bold">
 
-                            Salon Website
+                            Salon Website Concept Project
 
                         </h2>
 
@@ -657,7 +990,6 @@
                         <h4 class="text-white font-bold mb-6">Quick Links</h4>
                         <ul class="space-y-4 text-muted text-sm">
                             <li><a href="index.html#home" class="hover:text-brand">Home</a></li>
-                            <li><a href="index.html#services" class="hover:text-brand">Services</a></li>
                             <li><a href="social-media.html" class="hover:text-brand">Social Media</a></li>
                             <li><a href="portfolio.html" class="hover:text-brand">Portfolio</a></li>
                             <li><a href="index.html#contact" class="hover:text-brand">Contact</a></li>
@@ -666,10 +998,11 @@
                     <div>
                         <h4 class="text-white font-bold mb-6">Services</h4>
                         <ul class="space-y-4 text-muted text-sm">
-                            <li>Web Design</li>
-                            <li>Development</li>
-                            <li>E-Commerce</li>
-                            <li>SEO</li>
+                            <li>Social Media Management</li>
+              <li>Website Design</li>
+              <li>Website Development</li>
+              <li>E-Commerce</li>
+              <li>Website Maintenance</li>
                         </ul>
                     </div>
                     <div>
@@ -697,7 +1030,7 @@
                   Instagram
                 </a>
               </li>
-              <li>
+              <!--<li>
                 <a
                   href=""
                   target="_blank"
@@ -707,7 +1040,7 @@
                   <i class="fa-brands fa-linkedin-in text-brand"></i>
                   LinkedIn
                 </a>
-              </li>
+              </li>-->
                         </ul>
                     </div>
                 </div>
@@ -718,6 +1051,7 @@
         </footer>
         <script src="js/script.js"></script>
         <script src="js/navigation.js"></script>
+        <script src="js/social.js"></script>
 
     </body>
 

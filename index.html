@@ -1,13 +1,159 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brits Web Solutions | Modern Web Design & Development</title>
-    <meta
-      name="description"
-      content="Brits Web Solutions creates modern, high-performance websites and digital experiences that help businesses grow. Based in South Africa."
-    />
+    <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- =====================================================
+       PRIMARY SEO
+  ====================================================== -->
+
+  <title>
+    Brits Web Solutions | Web Design & Development South Africa
+  </title>
+
+  <meta
+    name="description"
+    content="Brits Web Solutions creates modern, responsive websites, e-commerce stores and digital solutions for small businesses in Gauteng and across South Africa."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="author"
+    content="Brits Web Solutions"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0066ff"
+  >
+
+  <link
+    rel="canonical"
+    href="https://britswebsolutions.netlify.app/"
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Brits Web Solutions | Web Design & Development"
+  >
+
+  <meta
+    property="og:description"
+    content="Modern websites, e-commerce solutions and digital services designed to help small businesses grow online."
+  >
+
+  <meta
+    property="og:url"
+    content="https://britswebsolutions.netlify.app/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Brits Web Solutions"
+  >
+
+  <meta
+    property="og:locale"
+    content="en_ZA"
+  >
+
+  <meta
+    property="og:image"
+    content="https://britswebsolutions.netlify.app/images/og-image.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Brits Web Solutions - Web Design and Development"
+  >
+
+  <!-- =====================================================
+       FAVICON
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    type="image/png/ico"
+    href="images/favicon/favicon.ico"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="images/favicon/apple-touch-icon.png"
+  >
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+
+  <!-- =====================================================
+       STRUCTURED DATA
+  ====================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://britswebsolutions.netlify.app/#business",
+
+    "name": "Brits Web Solutions",
+
+    "url": "https://britswebsolutions.netlify.app/",
+
+    "logo": "images/brits-Logo-symbol.png",
+
+    "image": "https://britswebsolutions.netlify.app/images/og-image.jpg",
+
+    "description": "Brits Web Solutions provides modern website design, web development, e-commerce and SEO services for businesses in Gauteng and across South Africa.",
+
+    "email": "brits.web.solutions.sa@gmail.com",
+
+    "areaServed": {
+      "@type": "Country",
+      "name": "South Africa"
+    },
+
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+
+    "serviceType": [
+      "Website Design",
+      "Website Development",
+      "E-Commerce Development",
+      "Search Engine Optimization",
+      "Website Maintenance"
+    ],
+
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61592495858473",
+      "https://www.instagram.com/brits.web.solutions/"
+    ]
+  }
+  </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -141,11 +287,9 @@
       <!-- DESKTOP NAV -->
       <div class="hidden lg:flex items-center gap-8">
         <a href="#home" class="nav-link relative">Home</a>
-        <a href="#about" class="nav-link relative">About</a>
-        <a href="#services" class="nav-link relative">Services</a>
         <a href="social-media.html" class="nav-link relative">Social Media</a>
         <a href="portfolio.html" class="nav-link relative">Portfolio</a>
-        <a href="#process" class="nav-link relative">Process</a>
+        <a href="about.html" class="nav-link relative">About</a>
         <a href="#contact" class="nav-link relative">Contact</a>
       </div>
 
@@ -184,14 +328,6 @@
           Home
         </a>
 
-        <a href="#about" class="mobile-nav-link text-white">
-          About
-        </a>
-
-        <a href="#services" class="mobile-nav-link text-white">
-          Services
-        </a>
-
         <a href="social-media.html" class="mobile-nav-link text-white">
           Social Media
         </a>
@@ -200,8 +336,8 @@
           Portfolio
         </a>
 
-        <a href="#process" class="mobile-nav-link text-white">
-          Process
+        <a href="about.html" class="mobile-nav-link text-white">
+          About
         </a>
 
         <a href="#contact" class="mobile-nav-link text-white">
@@ -245,13 +381,10 @@
               MODERN WEBSITES. SMART SOLUTIONS.
             </p>
             <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white">
-              We Build Websites That <span class="text-brand">Grow</span> Your
-              Business.
+              Helping Small Businesses <span class="text-brand">Grow</span> Online.
             </h1>
             <p class="text-muted text-lg md:text-xl leading-relaxed">
-              Brits Web Solutions helps businesses establish a strong online
-              presence with modern, responsive websites and digital solutions
-              that deliver results.
+              Professional social media management and website design for businesses across South Africa.
             </p>
             <div class="flex flex-wrap gap-4">
               <a
@@ -329,7 +462,7 @@
       </section>
 
       <!-- Services Section -->
-      <section id="services" class="py-24 px-4 md:px-8">
+      <section id="services" class="py-24 px-4 md:px-8 md:-mb-[110px] mb-[-110px]">
         <div class="max-w-[1440px] mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
             <div class="lg:sticky lg:top-32 space-y-6">
@@ -422,9 +555,223 @@
         </div>
       </section>
 
-      
+      <!-- Social Portfolio -->
+      <section id="portfolio" class="py-24 px-4 md:px-8 md:-mb-[110px] mb-[-110px]">
+        <div class="max-w-[1440px] mx-auto">
+          <div
+            class="bg-card rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/30"
+          >
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-16"
+            >
+              <div class="space-y-4">
+                <p
+                  class="text-brand text-xs font-bold uppercase tracking-[0.2em]"
+                >
+                  OUR SOCIAL WORK AND CONCEPTS
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                  Recent <span class="text-brand">Posts and Concepts</span>
+                </h2>
+
+                <p class="text-gray-500 max-w-xl">
+                  A selection of social media posts and concepts we've created for
+                  businesses across different industries.
+                </p>
+              </div>
+
+              <a
+                href="portfolio.html"
+                class="border border-brand text-brand rounded-full px-8 py-3 font-semibold hover:bg-brand hover:text-white transition-all"
+              >
+                View All
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/works-of-faith.png"
+                    alt="Project 1"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Construction
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Concepts</p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/spectrarig.png"
+                    alt="Project 2"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Legal
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Concepts</p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/law-firm.png"
+                    alt="Project 3"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Beauty
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Concepts</p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              >
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="images/portfolio/salon.png"
+                    alt="Project 4"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    Real Estate
+                  </h3>
+
+                  <p class="text-gray-500 text-sm">Concepts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Process -->
+      <section id="process" class="py-24 px-4 md:px-8 md:-mb-[110px] mb-[-110px]">
+        <div class="max-w-[1440px] mx-auto">
+          <!-- Heading -->
+
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <p class="text-brand text-xs font-bold uppercase tracking-[0.2em]">
+              OUR PROCESS
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+              From Idea to
+              <span class="text-brand">Post</span>
+            </h2>
+
+            <p class="text-muted text-lg">
+              Don't have the time to manage your social media? We do it for you.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                01
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Plan</h3>
+
+              <p class="text-muted leading-relaxed">
+                We learn about your business, your goals and your audience so we
+                can create the right solution.
+              </p>
+            </div>
+
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                02
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Create</h3>
+
+              <p class="text-muted leading-relaxed">
+                Beautiful, modern posts are designed to engage your audience and
+                drive results.
+              </p>
+            </div>
+
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                03
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Manage</h3>
+
+              <p class="text-muted leading-relaxed">
+                We manage your social media accounts, creating and scheduling posts to keep your audience engaged.
+              </p>
+            </div>
+
+            <div
+              class="bg-surface border border-border rounded-3xl p-8 hover:border-brand transition-all duration-300"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center text-xl font-bold mb-8"
+              >
+                04
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Report</h3>
+
+              <p class="text-muted leading-relaxed">
+                We provide detailed reports on the performance of your social media campaigns, helping you understand what's working and what needs improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Portfolio -->
-      <section id="portfolio" class="py-24 px-4 md:px-8">
+      <section id="portfolio" class="py-24 px-4 md:px-8 md:-mb-[110px] mb-[-110px]">
         <div class="max-w-[1440px] mx-auto">
           <div
             class="bg-card rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/30"
@@ -708,7 +1055,7 @@
                   <div>
                     <h4 class="font-bold text-xl mb-1">Location</h4>
 
-                    <p class="text-white/80">Gauteng, South Africa</p>
+                    <p class="text-white/80">South Africa</p>
                   </div>
                 </div>
               </div>
@@ -848,7 +1195,6 @@
             <h4 class="text-white font-bold mb-6">Quick Links</h4>
             <ul class="space-y-4 text-muted text-sm">
               <li><a href="#" class="hover:text-brand">Home</a></li>
-              <li><a href="#services" class="hover:text-brand">Services</a></li>
               <li><a href="social-media.html" class="hover:text-brand">Social Media</a></li>
               <li>
                 <a href="portfolio.html" class="hover:text-brand">Portfolio</a>
@@ -859,10 +1205,11 @@
           <div>
             <h4 class="text-white font-bold mb-6">Services</h4>
             <ul class="space-y-4 text-muted text-sm">
-              <li>Web Design</li>
-              <li>Development</li>
+              <li>Social Media Management</li>
+              <li>Website Design</li>
+              <li>Website Development</li>
               <li>E-Commerce</li>
-              <li>SEO</li>
+              <li>Website Maintenance</li>
             </ul>
           </div>
           <div>
@@ -897,7 +1244,7 @@
                   Instagram
                 </a>
               </li>
-              <li>
+              <!--<li>
                 <a
                   href=""
                   target="_blank"
@@ -907,7 +1254,7 @@
                   <i class="fa-brands fa-linkedin-in text-brand"></i>
                   LinkedIn
                 </a>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>
