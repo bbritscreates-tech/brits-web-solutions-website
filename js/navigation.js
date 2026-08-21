@@ -1,120 +1,188 @@
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
+// ----------------------------------------
+// NORMALISE PATH
+// ----------------------------------------
+
+function normalizePath(path) {
+    path = path.toLowerCase();
+
+    // Remove trailing slash
+    if (path.length > 1 && path.endsWith("/")) {
+        path = path.slice(0, -1);
+    }
+
+    // Treat root as index.html
+    if (path === "") {
+        path = "/index.html";
+    }
+
+    if (path === "/") {
+        path = "/index.html";
+    }
+
+    return path;
+}
+
+
+// ----------------------------------------
+// UPDATE ACTIVE NAV
+// ----------------------------------------
+
 function updateActiveNav() {
-    const currentPath = window.location.pathname.toLowerCase();
+
+    const currentPath = normalizePath(window.location.pathname);
     const currentHash = window.location.hash.toLowerCase();
 
-    navLinks.forEach((link) => {
+    // Remove all active classes first
+    navLinks.forEach(link => {
         link.classList.remove("active");
     });
 
-    // ----------------------------------------
-    // 1. HANDLE SEPARATE PAGES
-    // ----------------------------------------
 
-    navLinks.forEach((link) => {
-        const href = link.getAttribute("href");
+    // ========================================
+    // SEPARATE PAGES
+    // ========================================
 
-        if (!href) return;
+    const separatePages = [
+        "/portfolio.html",
+        "/social-media.html",
+        "/about.html"
+    ];
 
-        const linkUrl = new URL(href, window.location.origin);
-        const linkPath = linkUrl.pathname.toLowerCase();
+    if (separatePages.includes(currentPath)) {
 
-        // Portfolio page
-        if (
-            currentPath.endsWith("/portfolio.html") &&
-            linkPath.endsWith("/portfolio.html")
-        ) {
-            link.classList.add("active");
-        }
+        navLinks.forEach(link => {
 
-        // Social Media page
-        if (
-            currentPath.endsWith("/social-media.html") &&
-            linkPath.endsWith("/social-media.html")
-        ) {
-            link.classList.add("active");
-        }
+            const href = link.getAttribute("href");
 
-        // About page
-        if (
-            currentPath.endsWith("/about.html") &&
-            linkPath.endsWith("/about.html")
-        ) {
-            link.classList.add("active");
-        }
-    });
+            if (!href) return;
 
-    // ----------------------------------------
-    // 2. HANDLE HOME PAGE SECTIONS
-    // ----------------------------------------
+            const linkUrl = new URL(href, window.location.origin);
+            const linkPath = normalizePath(linkUrl.pathname);
 
-    const isHomePage =
-        currentPath === "/" ||
-        currentPath.endsWith("/index.html") ||
-        currentPath.endsWith("/");
+            if (linkPath === currentPath) {
+                link.classList.add("active");
+            }
 
-    if (!isHomePage) return;
-
-    // If we're at the very top, Home is active
-    if (window.scrollY < 100 && !currentHash) {
-        const homeLink = document.querySelector(
-            '.nav-link[href="#home"], .nav-link[href="/index.html"]'
-        );
-
-        if (homeLink) {
-            homeLink.classList.add("active");
-        }
+        });
 
         return;
     }
 
+
+    // ========================================
+    // HOME PAGE
+    // ========================================
+
+    const isHomePage = currentPath === "/index.html";
+
+    if (!isHomePage) {
+        return;
+    }
+
+
+    // ----------------------------------------
+    // If URL contains a hash
+    // Example: index.html#services
+    // ----------------------------------------
+
+    if (currentHash) {
+
+        const sectionId = currentHash.substring(1);
+
+        const matchingLink = document.querySelector(
+            `.nav-link[href="#${sectionId}"]`
+        );
+
+        if (matchingLink) {
+            matchingLink.classList.add("active");
+            return;
+        }
+    }
+
+
+    // ----------------------------------------
+    // Detect section while scrolling
+    // ----------------------------------------
+
     let currentSection = "";
 
-    sections.forEach((section) => {
-        const top = section.offsetTop - 150;
-        const bottom = top + section.offsetHeight;
+    sections.forEach(section => {
+
+        const rect = section.getBoundingClientRect();
+
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
 
         if (
-            window.scrollY >= top &&
-            window.scrollY < bottom
+            sectionTop <= 180 &&
+            sectionBottom > 180
         ) {
             currentSection = section.id.toLowerCase();
         }
+
     });
 
-    // If no section was detected, don't change anything
-    if (!currentSection) return;
 
-    navLinks.forEach((link) => {
-        const href = link.getAttribute("href");
+    // ----------------------------------------
+    // If at top of page → Home
+    // ----------------------------------------
 
-        if (!href) return;
+    if (window.scrollY < 100 && !currentSection) {
 
-        // Same-page section links
-        if (href.toLowerCase() === `#${currentSection}`) {
-            link.classList.add("active");
-        }
+        navLinks.forEach(link => {
 
-        // Home link
-        if (
-            currentSection === "home" &&
-            (
-                href.toLowerCase() === "#home" ||
-                href.toLowerCase() === "/index.html"
-            )
-        ) {
-            link.classList.add("active");
-        }
-    });
+            const href = link.getAttribute("href");
+
+            if (!href) return;
+
+            const linkUrl = new URL(href, window.location.origin);
+            const linkPath = normalizePath(linkUrl.pathname);
+
+            if (
+                link.getAttribute("href") === "#home" ||
+                linkPath === "/index.html"
+            ) {
+                link.classList.add("active");
+            }
+
+        });
+
+        return;
+    }
+
+
+    // ----------------------------------------
+    // Activate current section
+    // ----------------------------------------
+
+    if (currentSection) {
+
+        navLinks.forEach(link => {
+
+            const href = link.getAttribute("href");
+
+            if (!href) return;
+
+            if (
+                href.toLowerCase() === `#${currentSection}`
+            ) {
+                link.classList.add("active");
+            }
+
+        });
+
+    }
+
 }
 
-// Scroll
+
+// ----------------------------------------
+// EVENTS
+// ----------------------------------------
+
 window.addEventListener("scroll", updateActiveNav);
-
-// Page load
 window.addEventListener("load", updateActiveNav);
-
-// Hash changes
 window.addEventListener("hashchange", updateActiveNav);
