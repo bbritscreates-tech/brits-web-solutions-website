@@ -39,6 +39,15 @@
 
 }
 
+.nav-link.active {
+    color: #0066FF !important;
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 /* =========================================
    SOCIAL MEDIA INDUSTRY SHOWCASE
    BRITS WEB SOLUTIONS THEME
