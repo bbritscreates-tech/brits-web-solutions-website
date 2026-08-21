@@ -1,41 +1,29 @@
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", function () {
 
-// ----------------------------------------
-// NORMALISE PATH
-// ----------------------------------------
+    const navLinks = document.querySelectorAll(".nav-link");
 
-function normalizePath(path) {
-    path = path.toLowerCase();
+    if (!navLinks.length) return;
 
-    // Remove trailing slash
-    if (path.length > 1 && path.endsWith("/")) {
-        path = path.slice(0, -1);
+
+    // ========================================
+    // CURRENT PAGE
+    // ========================================
+
+    let currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+    // Root domain = index.html
+    if (currentPage === "") {
+        currentPage = "index.html";
     }
 
-    // Treat root as index.html
-    if (path === "") {
-        path = "/index.html";
-    }
 
-    if (path === "/") {
-        path = "/index.html";
-    }
+    // ========================================
+    // REMOVE ALL ACTIVE CLASSES
+    // ========================================
 
-    return path;
-}
-
-
-// ----------------------------------------
-// UPDATE ACTIVE NAV
-// ----------------------------------------
-
-function updateActiveNav() {
-
-    const currentPath = normalizePath(window.location.pathname);
-    const currentHash = window.location.hash.toLowerCase();
-
-    // Remove all active classes first
     navLinks.forEach(link => {
         link.classList.remove("active");
     });
@@ -45,13 +33,11 @@ function updateActiveNav() {
     // SEPARATE PAGES
     // ========================================
 
-    const separatePages = [
-        "/portfolio.html",
-        "/social-media.html",
-        "/about.html"
-    ];
-
-    if (separatePages.includes(currentPath)) {
+    if (
+        currentPage === "portfolio.html" ||
+        currentPage === "social-media.html" ||
+        currentPage === "about.html"
+    ) {
 
         navLinks.forEach(link => {
 
@@ -59,10 +45,15 @@ function updateActiveNav() {
 
             if (!href) return;
 
-            const linkUrl = new URL(href, window.location.origin);
-            const linkPath = normalizePath(linkUrl.pathname);
+            // Remove query strings and hashes
+            const linkPage = href
+                .split("#")[0]
+                .split("?")[0]
+                .split("/")
+                .pop()
+                .toLowerCase();
 
-            if (linkPath === currentPath) {
+            if (linkPage === currentPage) {
                 link.classList.add("active");
             }
 
@@ -76,89 +67,51 @@ function updateActiveNav() {
     // HOME PAGE
     // ========================================
 
-    const isHomePage = currentPath === "/index.html";
-
-    if (!isHomePage) {
+    if (currentPage !== "index.html") {
         return;
     }
 
 
     // ----------------------------------------
-    // If URL contains a hash
-    // Example: index.html#services
+    // Determine current section
     // ----------------------------------------
 
-    if (currentHash) {
+    const sections = document.querySelectorAll("section[id]");
 
-        const sectionId = currentHash.substring(1);
+    function updateSection() {
 
-        const matchingLink = document.querySelector(
-            `.nav-link[href="#${sectionId}"]`
-        );
+        let currentSection = "home";
 
-        if (matchingLink) {
-            matchingLink.classList.add("active");
-            return;
-        }
-    }
+        const scrollPosition = window.scrollY + 200;
 
+        sections.forEach(section => {
 
-    // ----------------------------------------
-    // Detect section while scrolling
-    // ----------------------------------------
-
-    let currentSection = "";
-
-    sections.forEach(section => {
-
-        const rect = section.getBoundingClientRect();
-
-        const sectionTop = rect.top;
-        const sectionBottom = rect.bottom;
-
-        if (
-            sectionTop <= 180 &&
-            sectionBottom > 180
-        ) {
-            currentSection = section.id.toLowerCase();
-        }
-
-    });
-
-
-    // ----------------------------------------
-    // If at top of page → Home
-    // ----------------------------------------
-
-    if (window.scrollY < 100 && !currentSection) {
-
-        navLinks.forEach(link => {
-
-            const href = link.getAttribute("href");
-
-            if (!href) return;
-
-            const linkUrl = new URL(href, window.location.origin);
-            const linkPath = normalizePath(linkUrl.pathname);
+            const sectionTop = section.offsetTop;
+            const sectionBottom =
+                sectionTop + section.offsetHeight;
 
             if (
-                link.getAttribute("href") === "#home" ||
-                linkPath === "/index.html"
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionBottom
             ) {
-                link.classList.add("active");
+                currentSection = section.id.toLowerCase();
             }
 
         });
 
-        return;
-    }
+
+        // ------------------------------------
+        // Remove active
+        // ------------------------------------
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+        });
 
 
-    // ----------------------------------------
-    // Activate current section
-    // ----------------------------------------
-
-    if (currentSection) {
+        // ------------------------------------
+        // Find matching link
+        // ------------------------------------
 
         navLinks.forEach(link => {
 
@@ -167,7 +120,19 @@ function updateActiveNav() {
             if (!href) return;
 
             if (
-                href.toLowerCase() === `#${currentSection}`
+                href === `#${currentSection}` ||
+                href === `/index.html#${currentSection}`
+            ) {
+                link.classList.add("active");
+            }
+
+            // Home
+            if (
+                currentSection === "home" &&
+                (
+                    href === "/index.html" ||
+                    href === "#"
+                )
             ) {
                 link.classList.add("active");
             }
@@ -176,13 +141,25 @@ function updateActiveNav() {
 
     }
 
-}
+
+    // ----------------------------------------
+    // Initial state
+    // ----------------------------------------
+
+    updateSection();
 
 
-// ----------------------------------------
-// EVENTS
-// ----------------------------------------
+    // ----------------------------------------
+    // Scroll
+    // ----------------------------------------
 
-window.addEventListener("scroll", updateActiveNav);
-window.addEventListener("load", updateActiveNav);
-window.addEventListener("hashchange", updateActiveNav);
+    window.addEventListener("scroll", updateSection);
+
+
+    // ----------------------------------------
+    // Hash change
+    // ----------------------------------------
+
+    window.addEventListener("hashchange", updateSection);
+
+});
